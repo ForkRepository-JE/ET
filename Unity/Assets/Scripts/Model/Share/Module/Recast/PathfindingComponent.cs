@@ -24,8 +24,6 @@ namespace ET
         public List<long> polys = new(MAX_POLYS);
 
         public IDtQueryFilter filter;
-
-        public float[] Result = new float[MAX_POLYS * 3];
         
         public List<StraightPathItem> straightPath = new();
 
