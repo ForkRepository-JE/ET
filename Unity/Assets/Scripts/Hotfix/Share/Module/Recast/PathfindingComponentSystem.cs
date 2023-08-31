@@ -47,8 +47,8 @@ namespace ET
                 throw new Exception($"pathfinding ptr is zero: {self.Scene().Name}");
             }
 
-            RcVec3f startPos = new(start.x, start.y, start.z);
-            RcVec3f endPos = new(target.x, target.y, target.z);
+            RcVec3f startPos = new(-start.x, start.y, start.z);
+            RcVec3f endPos = new(-target.x, target.y, target.z);
 
             long startRef;
             long endRef;
@@ -81,7 +81,7 @@ namespace ET
             for (int i = 0; i < self.straightPath.Count; ++i)
             {
                 RcVec3f pos = self.straightPath[i].pos;
-                result.Add(new float3(pos.x, pos.y, pos.z));
+                result.Add(new float3(-pos.x, pos.y, pos.z));
             }
         }
     }
